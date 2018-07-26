@@ -211,6 +211,15 @@ def build_cli_parser(operation=None):
             default=None,
             dest="uuid",
             help="UID of a managed object")
+    elif operation is Operation.GET_ATTRIBUTES:
+        parser.add_option(
+            "-i",
+            "--uuid",
+            action="store",
+            type="str",
+            default=None,
+            dest="uuid",
+            help="UID of a managed object")
     elif operation is Operation.LOCATE:
         parser.add_option(
             "-n",
